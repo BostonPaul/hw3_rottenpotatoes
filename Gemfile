@@ -1,6 +1,7 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
-gem 'rails', '3.1.0'
+#gem 'rails', '3.1.0'
+gem 'rails', '3.2.1'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -8,11 +9,20 @@ gem 'rails', '3.1.0'
 # for Heroku deployment - as described in Ap. A of ELLS book
 group :development, :test do
   gem 'sqlite3'
-  gem 'ruby-debug19', :require => 'ruby-debug'
+  #gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'database_cleaner'
   gem 'capybara'
   gem 'launchy'
+  gem 'rspec-rails'
+  gem 'ZenTest'
+  #gem 'guard-spork', '1.2.0'
+  #gem 'guard-rspec', '1.2.1'
+  gem 'spork', '0.9.2'
+  gem 'wdm', '~>0.0.3'
+  gem 'factory_girl', '4.1.0'
+  gem "simplecov", :require => false
 end
+
 group :test do
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
@@ -24,11 +34,12 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'therubyracer'              
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  #gem 'therubyracer'
+  gem 'sass-rails', "  ~> 3.2.3"
+  gem 'coffee-rails', "~> 3.2.1"
   gem 'uglifier'
 end
+
 
 gem 'jquery-rails'
 
@@ -40,3 +51,6 @@ gem 'jquery-rails'
 
 # To use debugger
 gem 'haml'
+
+# to use TMdb gem
+gem 'ruby-tmdb'
